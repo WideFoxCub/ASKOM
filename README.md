@@ -13,7 +13,7 @@ Aplikacja automatycznie wczyta dane i umożliwi:
 ---
 
 ## 📂 Struktura projektu
-
+```
 ASKOM/
 ├── Config/Paths.cs # Ścieżki do plików
 ├── Data/orders.json # Plik danych JSON z zamówieniami
@@ -21,7 +21,7 @@ ASKOM/
 ├── Services/FileManager.cs # Wczytywanie/odczytywanie JSON
 ├── MainWindow.xaml # Interfejs graficzny (UI)
 └── MainWindow.xaml.cs # Logika interfejsu użytkownika
-
+```
 
 ## 🧩 `FileManager.cs`
 
