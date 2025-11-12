@@ -1,0 +1,5 @@
+[
+  { "Id": "ZL001", "Produkt": "Produkt A", "IloscPlanowana": 1000 },
+  { "Id": "ZL002", "Produkt": "Produkt B", "IloscPlanowana": 500 },
+  { "Id": "ZL003", "Produkt": "Produkt C", "IloscPlanowana": 750 }
+]

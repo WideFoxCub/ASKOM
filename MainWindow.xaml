@@ -1,0 +1,40 @@
+﻿<Window x:Class="ASKOM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ASKOM"
+        mc:Ignorable="d"
+        Title="Zlecenia" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Sekcja wyboru zlecenia -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Zlecenie: " VerticalAlignment="Center"/>
+            <ComboBox x:Name="OrderComboBox" Width="394" Margin="5,0"/>
+        </StackPanel>
+
+        <!-- Sekcja wprowadzania ilości -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
+            <TextBlock Text="Ilość wyprodukowana: " VerticalAlignment="Center"/>
+            <TextBox x:Name="QuantityTextBox" Width="100" Margin="5,0"/>
+            <Button Content="Zapisz" Width="100" Margin="10,0" Click="SaveButton_Click"/>
+            <Button Content="Pokaż historię" Width="100" Click="ShowHistory_Click"/>
+        </StackPanel>
+
+        <!-- Sekcja historii -->
+        <DataGrid x:Name="HistoryGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID zlecenia" Binding="{Binding OrderId}" Width="*"/>
+                <DataGridTextColumn Header="Produkt" Binding="{Binding Produkt}" Width="*"/>
+                <DataGridTextColumn Header="Ilość" Binding="{Binding IloscWyprodukowana}" Width="*"/>
+                <DataGridTextColumn Header="Data rejestracji" Binding="{Binding DataRejestracji}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
